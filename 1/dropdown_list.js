@@ -21,17 +21,4 @@ addEventListener("DOMContentLoaded", () => {
             link.addEventListener("click", listLinkClickHandler);
         }
     }
-    /*var list = document.getElementsByClassName("dropdown__list")[0];
-
-    selectedValue.addEventListener("click", () => {
-        list.className = "dropdown__list dropdown__list_active";
-    });
-
-    var linksList = document.getElementsByClassName("dropdown__link")
-    for (link of linksList) {
-        link.addEventListener("click", () => {
-            selectedValue.textContent = link.textContent;
-            list.className = "dropdown__list";
-        });
-    }*/
 })
