@@ -1,9 +1,8 @@
 addEventListener("DOMContentLoaded", () => {
     var dropdownMenus = document.getElementsByClassName("dropdown");
     for (var menu of dropdownMenus) {
-        var menuChildren = menu.children;
-        var selectedValue = menuChildren[0];
-        var list = menuChildren[1];
+        var selectedValue = menu.querySelector(".dropdown__value");
+        var list = menu.querySelector(".dropdown__list");
 
         var listClickHandler = function () {
             list.className = "dropdown__list dropdown__list_active";
@@ -15,8 +14,7 @@ addEventListener("DOMContentLoaded", () => {
         }
 
         selectedValue.addEventListener("click", listClickHandler);
-        for (var item of list.children) {
-            link = item.children[0];
+        for (var link of list.querySelectorAll(".dropdown__link")) {
             link.href = "javascript:void(0)";
             link.addEventListener("click", listLinkClickHandler);
         }
